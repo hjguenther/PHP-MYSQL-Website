@@ -4,7 +4,6 @@
  <title>Webpage displaying mysql table</title>
  <style>
       table {
-        border = 0;
         width: 87%;
         border-collapse: collapse;
       }
@@ -23,7 +22,7 @@
    <h1> A PHP and SQL Website </h1>
   </header>
 <?php
-$pdo = NEW PDO('mysql:host=localhost;port=3306;dbname=misc', 'heidi', 'YES');
+require_once "pdo.php";
 $stmt = $pdo->query("SELECT name, email, password FROM users");
 echo '<table border = 1>'."\n";
  echo "<tr><th>";
